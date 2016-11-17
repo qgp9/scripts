@@ -16,7 +16,7 @@
 
 echo "## Make library Set 'myperl' at $HOME/perl5/myperl"
 echo "## This is template dictory to generate library set in easy."
-echo "## Hence, Don't use this lib set directly.
+echo "## Hence, Don't use this lib set directly."
 export MYPERL=$HOME/perl5/myperl
 
 echo "### Install CPANM"
@@ -25,7 +25,7 @@ curl -L http://cpanmin.us | perl -I $MYPERL - -f -l $MYPERL App::cpanminus
 echo "### Install Loca::Lib"
 $MYPERL/bin/cpanm -l $MYPERL local::lib
 
-echo "## Make library set 'mydev' at $HOME/perl5/mydev: 
+echo "## Make library set 'mydev' at $HOME/perl5/mydev:" 
 cp -a $MYPERL $MYPERL/../mydev
 
 
