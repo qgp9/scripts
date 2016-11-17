@@ -12,6 +12,9 @@
 # `myperl` on a command line will give you a localize perl environment
 # 
 # Later you can set isolated libs like; `myperl mojo`, `myperl dev2`
+#
+# Usage 
+# curl https://raw.githubusercontent.com/qgp9/scripts/master/Install_local_perl_lib.sh | bash
 
 echo
 echo "## Make library Set 'myperl' at $HOME/perl5/myperl"
