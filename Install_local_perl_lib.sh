@@ -17,26 +17,27 @@
 # curl https://raw.githubusercontent.com/qgp9/scripts/master/Install_local_perl_lib.sh | bash
 
 echo
-echo "## Make library Set 'myperl' at $HOME/perl5/myperl"
+echo "## Make library Set 'myperl' at $HOME/perl5/"
 echo "## This is template dictory to generate library set in easy."
 echo "## Hence, Don't use this lib set directly."
 echo
-export MYPERL=$HOME/perl5/myperl
+MYPERL="$HOME/perl5"
+LIBTMPL="$MYPERL/myperl"
 
 echo
 echo "### Install CPANM"
 echo
-curl -L http://cpanmin.us | perl -I $MYPERL - -f -l $MYPERL App::cpanminus
+curl -L http://cpanmin.us | perl -I "$LIBTMPL" - -f -l "$LIBTMPL" App::cpanminus
 
 echo
 echo "### Install Loca::Lib"
 echo
-$MYPERL/bin/cpanm -l $MYPERL local::lib
+$MYPERL/bin/cpanm -l "$LIBTMPL" local::lib
 
 echo
-echo "## Make library set 'mydev' at $HOME/perl5/mydev:" 
+echo "## Make library set 'mydev' at $MYPERL/mydev:" 
 echo
-cp -a $MYPERL $MYPERL/../mydev
+cp -a "$LIBTMPL" "$MYPERL/mydev"
 
 
 echo "## add 'myperl' to ~/.bash_profile"
