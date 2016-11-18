@@ -32,7 +32,7 @@ curl -L http://cpanmin.us | perl -I "$LIBTMPL" - -f -l "$LIBTMPL" App::cpanminus
 echo
 echo "### Install Loca::Lib"
 echo
-$MYPERL/bin/cpanm -l "$LIBTMPL" local::lib
+"$LIBTMPL"/bin/cpanm -l "$LIBTMPL" local::lib
 
 echo
 echo "## Make library set 'mydev' at $MYPERL/mydev:" 
