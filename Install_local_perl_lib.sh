@@ -14,7 +14,7 @@
 # Later you can set isolated libs like; `myperl mojo`, `myperl dev2`
 #
 # Usage 
-# curl https://raw.githubusercontent.com/qgp9/scripts/master/Install_local_perl_lib.sh | bash
+# curl https://qgp9.github.io/scripts/Install_local_perl_lib.sh | bash
 
 echo
 echo "## Make library Set 'myperl' at $HOME/perl5/"
@@ -37,7 +37,8 @@ echo
 echo
 echo "## Make library set 'mydev' at $MYPERL/mydev:" 
 echo
-cp -a "$LIBTMPL" "$MYPERL/mydev"
+mkdir -p $MYPERL/mydev 
+cp -a "$LIBTMPL/" "$MYPERL/mydev/"
 
 
 echo "## add 'myperl' to ~/.bash_profile"
